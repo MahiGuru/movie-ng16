@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: 'center';
+    .side-menu {
+        width: 100px
+    }
+    .content {
+        flex: 1
+    }
+  }

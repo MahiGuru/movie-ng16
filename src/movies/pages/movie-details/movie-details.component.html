@@ -1,0 +1,26 @@
+<button mat-raised-button color="primary" (click)="backButtonClick()">
+  Back
+</button> 
+<div *ngIf="movie" class="movie-detail">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.original_title }}</mat-card-subtitle>
+    </mat-card-header>
+    <aside class="img">
+      <img
+        mat-card-image
+        [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path"
+        alt="Photo of a Shiba Inu"
+        width="100"
+      />
+    </aside>
+    <mat-card-content>
+      <mat-card-subtitle>{{ movie.overview }}</mat-card-subtitle>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
