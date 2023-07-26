@@ -30,7 +30,9 @@ export class MovieDetailsComponent extends DestroyComponent implements OnInit {
       }
     });
   } 
-  
+  getMovieReview() {
+    this.router.navigateByUrl("movies/reviews");
+  }
   backButtonClick() {
     this.router.navigateByUrl('movies/list');
   }

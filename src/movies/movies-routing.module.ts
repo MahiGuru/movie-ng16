@@ -4,6 +4,7 @@ import { MovieListComponent } from "./pages/movie-list/movie-list.component";
 import { MovieDetailsComponent } from "./pages/movie-details/movie-details.component";
 import { AddMovieComponent } from './pages/add-movie/add-movie.component';
 import { MoviesComponent } from './pages/movies/movies.component';
+import { MovieReviewComponent } from "./pages/movie-review/movie-review.component";
 
 const routes: Routes = [
     {
@@ -12,6 +13,7 @@ const routes: Routes = [
             {path: "list", component: MovieListComponent},
             {path: "add", component: AddMovieComponent},
             {path: "details", component: MovieDetailsComponent},
+            {path: "reviews", component: MovieReviewComponent},
             {
                 path:"", redirectTo:'list', pathMatch:'full'
             }

@@ -1,0 +1,41 @@
+<button mat-raised-button color="primary" (click)="backButtonClick()">
+    Back
+  </button> 
+  <div *ngIf="movie" class="movie-detail">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+        <mat-card-subtitle>{{ movie.original_title }}</mat-card-subtitle>
+      </mat-card-header>
+      <aside class="img">
+        <img
+          mat-card-image
+          [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path"
+          alt="Photo of a Shiba Inu"
+          width="100"
+        />
+      </aside>
+      <mat-card-content>
+        <mat-card-subtitle>{{ movie.overview }}</mat-card-subtitle>
+      </mat-card-content> 
+    </mat-card>
+  </div>
+  <h2>Reviews</h2>
+  <hr />
+  <mat-list class="example-list-wrapping">
+    <mat-list-item lines="3" *ngFor="let review of movieReviews">
+      <span matListItemTitle>{{review.author}}</span>
+      <span>Rating: {{review.author_details.rating}}</span><br />
+      <span> {{review.content}}
+      </span>
+    </mat-list-item>
+    <mat-list-item lines="3">
+      <span matListItemTitle>Title</span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+      non proident, sunt in culpa qui officia deserunt mollit anim id est
+    </mat-list-item>
+  </mat-list>
+  
