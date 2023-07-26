@@ -36,4 +36,10 @@ export class MovieService {
         })
       );
    }
+
+   public getMovieDetails(movieId: number) {
+    return this.http.get<MovieResponse>('https://api.themoviedb.org/3/movie/'+movieId, this.options).pipe(map(movie => {
+      return movie;
+    }));
+   }
 }
